@@ -7,7 +7,7 @@ import Link from './uss-router/Link';
 import integer32Logo from './assets/integer32-logo.svg';
 
 const ACE_URL = 'https://github.com/ajaxorg/ace';
-const CLIPPY_URL = 'https://github.com/Manishearth/rust-clippy';
+const CLIPPY_URL = 'https://github.com/rust-lang/rust-clippy';
 const MIRI_URL = 'https://github.com/rust-lang/miri';
 const CRATES_IO_URL = 'https://crates.io/';
 const RUST_COOKBOOK_URL = 'https://rust-lang-nursery.github.io/rust-cookbook/';
@@ -17,7 +17,7 @@ const I32_URL = 'http://integer32.com/';
 const LOCALSTORAGE_URL = 'https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API';
 const ORIGINAL_PLAYGROUND_URL = 'https://github.com/rust-lang/rust-playpen';
 const REPO_URL = 'https://github.com/integer32llc/rust-playground';
-const RUSTFMT_URL = 'https://github.com/rust-lang-nursery/rustfmt';
+const RUSTFMT_URL = 'https://github.com/rust-lang/rustfmt';
 const SHEPMASTER_URL = 'https://github.com/shepmaster/';
 
 const CRATE_EXAMPLE = `extern crate rand;
