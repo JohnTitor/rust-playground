@@ -18,32 +18,6 @@ const Gist: React.FC = () => {
   );
 };
 
-const Links: React.FC = () => {
-  const codeUrl = useSelector(selectors.codeUrlSelector);
-  const gistUrl = useSelector((state: State) => state.output.gist.url);
-  const issueUrl = useSelector(selectors.issueUrlSelector);
-  const permalink = useSelector(selectors.permalinkSelector);
-  const urloUrl = useSelector(selectors.urloUrlSelector);
-
-  return (
-    <Fragment>
-      <Copied href={permalink}>Permalink to the playground</Copied>
-      <Copied href={gistUrl}>Direct link to the gist</Copied>
-      <Copied href={codeUrl}>Embedded code in link</Copied>
-      <NewWindow href={urloUrl}>Open a new thread in the Rust user forum</NewWindow>
-      <NewWindow href={issueUrl}> Open an issue on the Rust GitHub repository</NewWindow>
-    </Fragment>
-  );
-};
-
-interface CopiedProps {
-  href: string;
-}
-
-interface CopiedState {
-  copied: boolean;
-}
-
 class Copied extends React.PureComponent<CopiedProps, CopiedState> {
   public constructor(props) {
     super(props);
@@ -68,6 +42,32 @@ class Copied extends React.PureComponent<CopiedProps, CopiedState> {
     this.setState({ copied: true });
     setTimeout(() => { this.setState({ copied: false }); }, 1000);
   }
+}
+
+const Links: React.FC = () => {
+  const codeUrl = useSelector(selectors.codeUrlSelector);
+  const gistUrl = useSelector((state: State) => state.output.gist.url);
+  const issueUrl = useSelector(selectors.issueUrlSelector);
+  const permalink = useSelector(selectors.permalinkSelector);
+  const urloUrl = useSelector(selectors.urloUrlSelector);
+
+  return (
+    <Fragment>
+      <Copied href={permalink}>Permalink to the playground</Copied>
+      <Copied href={gistUrl}>Direct link to the gist</Copied>
+      <Copied href={codeUrl}>Embedded code in link</Copied>
+      <NewWindow href={urloUrl}>Open a new thread in the Rust user forum</NewWindow>
+      <NewWindow href={issueUrl}> Open an issue on the Rust GitHub repository</NewWindow>
+    </Fragment>
+  );
+};
+
+interface CopiedProps {
+  href: string;
+}
+
+interface CopiedState {
+  copied: boolean;
 }
 
 interface NewWindowProps {
