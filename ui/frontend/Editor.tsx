@@ -105,7 +105,7 @@ class SimpleEditor extends React.PureComponent<CommonEditorProps> {
   }
 }
 
-const Editor: React.SFC = () => {
+const Editor: React.FC = () => {
   const code = useSelector((state: State) => state.code);
   const editor = useSelector((state: State) => state.configuration.editor);
   const position = useSelector((state: State) => state.position);

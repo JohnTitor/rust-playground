@@ -23,7 +23,7 @@ const useDispatchAndClose = (action: () => void, close: () => void) => {
   );
 }
 
-const BuildMenu: React.SFC<BuildMenuProps> = props => {
+const BuildMenu: React.FC<BuildMenuProps> = props => {
   const isWasmAvailable = useSelector(selectors.isWasmAvailable);
 
   const compile = useDispatchAndClose(actions.performCompile, props.close);
@@ -65,7 +65,7 @@ const BuildMenu: React.SFC<BuildMenuProps> = props => {
   );
 };
 
-const WasmAside: React.SFC = () => (
+const WasmAside: React.FC = () => (
   <p className="build-menu__aside">
     Note: WASM currently requires using the Nightly channel, selecting this
     option will switch to Nightly.

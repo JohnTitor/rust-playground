@@ -8,7 +8,7 @@ import Output from './Output';
 import * as selectors from './selectors';
 import State from './state';
 
-const Playground: React.SFC = () => {
+const Playground: React.FC = () => {
   const showNotifications = useSelector(selectors.anyNotificationsToShowSelector);
   const focus = useSelector((state: State) => state.output.meta.focus);
   const splitOrientation = useSelector((state: State) => state.configuration.orientation);

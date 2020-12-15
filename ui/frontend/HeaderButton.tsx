@@ -8,7 +8,7 @@ interface HeaderButtonProps {
   isExpandable?: boolean;
 }
 
-const HeaderButton: React.SFC<HeaderButtonProps> = ({ icon, rightIcon, isExpandable, children }) => {
+const HeaderButton: React.FC<HeaderButtonProps> = ({ icon, rightIcon, isExpandable, children }) => {
   const c = ['header-button'];
 
   if (icon) { c.push('header-button--has-left-icon'); }

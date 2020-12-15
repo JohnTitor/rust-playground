@@ -21,7 +21,7 @@ interface ConfigMenuProps {
   close: () => void;
 }
 
-const ConfigMenu: React.SFC<ConfigMenuProps> = () => {
+const ConfigMenu: React.FC<ConfigMenuProps> = () => {
   const keybinding = useSelector((state: State) => state.configuration.keybinding);
   const theme = useSelector((state: State) => state.configuration.theme);
   const orientation = useSelector((state: State) => state.configuration.orientation);

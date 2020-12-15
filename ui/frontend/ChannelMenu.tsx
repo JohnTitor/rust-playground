@@ -13,7 +13,7 @@ interface ChannelMenuProps {
   close: () => void;
 }
 
-const ChannelMenu: React.SFC<ChannelMenuProps> = props => {
+const ChannelMenu: React.FC<ChannelMenuProps> = props => {
   const channel = useSelector((state: State) => state.configuration.channel);
   const stableVersion = useSelector(selectors.stableVersionText);
   const betaVersion = useSelector(selectors.betaVersionText);
@@ -61,7 +61,7 @@ const ChannelMenu: React.SFC<ChannelMenuProps> = props => {
   );
 };
 
-const Desc: React.SFC<{}> = ({ children }) => (
+const Desc: React.FC<{}> = ({ children }) => (
   <p className="channel-menu__description">{children}</p>
 );
 

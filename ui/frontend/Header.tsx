@@ -15,7 +15,7 @@ import ToolsMenu from './ToolsMenu';
 import * as actions from './actions';
 import * as selectors from './selectors';
 
-const Header: React.SFC = () => (
+const Header: React.FC = () => (
   <div className="header">
     <HeaderSet id="build">
       <SegmentedButtonSet>
@@ -57,11 +57,11 @@ interface HeaderSetProps {
   id: string;
 }
 
-const HeaderSet: React.SFC<HeaderSetProps> = ({ id, children }) => (
+const HeaderSet: React.FC<HeaderSetProps> = ({ id, children }) => (
   <div className={`header__set header__set--${id}`}>{children}</div>
 );
 
-const ExecuteButton: React.SFC = () => {
+const ExecuteButton: React.FC = () => {
   const executionLabel = useSelector(selectors.getExecutionLabel);
 
   const dispatch = useDispatch();
@@ -76,7 +76,7 @@ const ExecuteButton: React.SFC = () => {
   );
 };
 
-const BuildMenuButton: React.SFC = () => {
+const BuildMenuButton: React.FC = () => {
   const Button = React.forwardRef<HTMLButtonElement, { toggle: () => void }>(({ toggle }, ref) => (
     <SegmentedButton title="Select what to build" ref={ref} onClick={toggle}>
       <HeaderButton icon={<MoreOptionsIcon />} />
@@ -87,7 +87,7 @@ const BuildMenuButton: React.SFC = () => {
   return <PopButton Button={Button} Menu={BuildMenu} />;
 };
 
-const ModeMenuButton: React.SFC = () => {
+const ModeMenuButton: React.FC = () => {
   const label = useSelector(selectors.getModeLabel);
 
   const Button = React.forwardRef<HTMLButtonElement, { toggle: () => void }>(({ toggle }, ref) => (
@@ -100,7 +100,7 @@ const ModeMenuButton: React.SFC = () => {
   return <PopButton Button={Button} Menu={ModeMenu} />;
 };
 
-const ChannelMenuButton: React.SFC = () => {
+const ChannelMenuButton: React.FC = () => {
   const label = useSelector(selectors.getChannelLabel);
 
   const Button = React.forwardRef<HTMLButtonElement, { toggle: () => void }>(({ toggle }, ref) => (
@@ -113,7 +113,7 @@ const ChannelMenuButton: React.SFC = () => {
   return <PopButton Button={Button} Menu={ChannelMenu} />;
 }
 
-const AdvancedOptionsMenuButton: React.SFC = () => {
+const AdvancedOptionsMenuButton: React.FC = () => {
   const advancedOptionsSet = useSelector(selectors.getAdvancedOptionsSet);
 
   const Button = React.forwardRef<HTMLButtonElement, { toggle: () => void }>(({ toggle }, ref) => (
@@ -126,7 +126,7 @@ const AdvancedOptionsMenuButton: React.SFC = () => {
   return <PopButton Button={Button} Menu={AdvancedOptionsMenu} />;
 }
 
-const ShareButton: React.SFC = () => {
+const ShareButton: React.FC = () => {
   const dispatch = useDispatch();
   const gistSave = useCallback(() => dispatch(actions.performGistSave()), [dispatch]);
 
@@ -138,7 +138,7 @@ const ShareButton: React.SFC = () => {
 };
 
 
-const ToolsMenuButton: React.SFC = () => {
+const ToolsMenuButton: React.FC = () => {
   const Button = React.forwardRef<HTMLButtonElement, { toggle: () => void }>(({ toggle }, ref) => (
     <SegmentedButton title="Run extra tools on the source code" ref={ref} onClick={toggle}>
       <HeaderButton isExpandable>Tools</HeaderButton>
@@ -149,7 +149,7 @@ const ToolsMenuButton: React.SFC = () => {
   return <PopButton Button={Button} Menu={ToolsMenu} />;
 };
 
-const ConfigMenuButton: React.SFC = () => {
+const ConfigMenuButton: React.FC = () => {
   const Button = React.forwardRef<HTMLButtonElement, { toggle: () => void }>(({ toggle }, ref) => (
     <SegmentedButton title="Show the configuration options" ref={ref} onClick={toggle}>
       <HeaderButton icon={<ConfigIcon />} isExpandable>Config</HeaderButton>
@@ -160,7 +160,7 @@ const ConfigMenuButton: React.SFC = () => {
   return <PopButton Button={Button} Menu={ConfigMenu} />;
 };
 
-const HelpButton: React.SFC = () => (
+const HelpButton: React.FC = () => (
   <SegmentedLink title="View help" action={actions.navigateToHelp}>
     <HeaderButton icon={<HelpIcon />} />
   </SegmentedLink>

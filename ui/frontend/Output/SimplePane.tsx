@@ -9,7 +9,7 @@ interface HighlightErrorsProps {
   label: string;
 }
 
-const HighlightErrors: React.SFC<HighlightErrorsProps> = ({ label, children }) => (
+const HighlightErrors: React.FC<HighlightErrorsProps> = ({ label, children }) => (
   <div className="output-stderr">
     <Header label={label} />
     <pre>
@@ -31,7 +31,7 @@ export interface ReallySimplePaneProps {
   error?: string;
 }
 
-const SimplePane: React.SFC<SimplePaneProps> = props => (
+const SimplePane: React.FC<SimplePaneProps> = props => (
   <div className={`output-${props.kind}`}>
     {(props.requestsInProgress > 0) && <Loader />}
     <Section kind="error" label="Errors">{props.error}</Section>

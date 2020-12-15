@@ -9,7 +9,7 @@ import * as selectors from './selectors';
 
 const SURVEY_URL = 'https://blog.rust-lang.org/2020/09/10/survey-launch.html';
 
-const Notifications: React.SFC = () => {
+const Notifications: React.FC = () => {
   return (
     <Portal>
       <div className="notifications">
@@ -19,7 +19,7 @@ const Notifications: React.SFC = () => {
   );
 };
 
-const Rust2020SurveyNotification: React.SFC = () => {
+const Rust2020SurveyNotification: React.FC = () => {
   const showRust2020Survey = useSelector(selectors.showRustSurvey2020Selector);
 
   const dispatch = useDispatch();
@@ -39,7 +39,7 @@ interface NotificationProps {
   onClose: () => void;
 }
 
-const Notification: React.SFC<NotificationProps> = ({ onClose, children }) => (
+const Notification: React.FC<NotificationProps> = ({ onClose, children }) => (
   <div className="notifications__notification">
     <div className="notifications__notification-content">{children}</div>
     <button className="notifications__close" onClick={onClose}><Close /></button>

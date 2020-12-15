@@ -10,7 +10,7 @@ export interface HelpExampleProps {
   code: string;
 }
 
-const HelpExample: React.SFC<HelpExampleProps> = ({ code }) => {
+const HelpExample: React.FC<HelpExampleProps> = ({ code }) => {
   const dispatch = useDispatch();
   const showExample = useCallback(
     () => dispatch(actions.showExample(code)),

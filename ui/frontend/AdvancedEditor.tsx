@@ -80,7 +80,7 @@ function useEditorProp<T>(editor: AceEditor, prop: T, whenPresent: (editor: AceE
   }, [editor, prop, whenPresent]);
 }
 
-const AdvancedEditor: React.SFC<AdvancedEditorProps> = props => {
+const AdvancedEditor: React.FC<AdvancedEditorProps> = props => {
   const [editor, setEditor] = useState<AceEditor>(null);
   const child = useRef<HTMLDivElement>(null);
 

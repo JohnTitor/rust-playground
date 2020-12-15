@@ -4,7 +4,7 @@ interface MenuGroupProps {
   title: string;
 }
 
-const MenuGroup: React.SFC<MenuGroupProps> = ({ title, children }) => (
+const MenuGroup: React.FC<MenuGroupProps> = ({ title, children }) => (
   <div className="menu-group">
     <h1 className="menu-group__title">{title}</h1>
     <div className="menu-group__content">

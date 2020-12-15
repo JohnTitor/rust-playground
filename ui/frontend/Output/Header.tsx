@@ -4,7 +4,7 @@ interface HeaderProps {
   label: string;
 }
 
-const Header: React.SFC<HeaderProps> = ({ label }) => (
+const Header: React.FC<HeaderProps> = ({ label }) => (
   <span className="output-header">{label}</span>
 );
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link, { LinkProps } from './uss-router/Link';
 
-export const SegmentedButtonSet: React.SFC = ({ children }) => (
+export const SegmentedButtonSet: React.FC = ({ children }) => (
   <div className="segmented-button">{children}</div>
 );
 
