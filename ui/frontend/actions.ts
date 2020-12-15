@@ -32,23 +32,23 @@ import {
 } from './types';
 
 const routes = {
-  compile: { pathname: '/compile' },
-  execute: { pathname: '/execute' },
-  format: { pathname: '/format' },
-  clippy: { pathname: '/clippy' },
-  miri: { pathname: '/miri' },
-  macroExpansion: { pathname: '/macro-expansion' },
+  compile: { pathname: 'https://play.rust-lang.org/compile' },
+  execute: { pathname: 'https://play.rust-lang.org/execute' },
+  format: { pathname: 'https://play.rust-lang.org/format' },
+  clippy: { pathname: 'https://play.rust-lang.org/clippy' },
+  miri: { pathname: 'https://play.rust-lang.org/miri' },
+  macroExpansion: { pathname: 'https://play.rust-lang.org/macro-expansion' },
   meta: {
-    crates: { pathname: '/meta/crates' },
+    crates: { pathname: 'https://play.rust-lang.org/meta/crates' },
     version: {
-      stable: '/meta/version/stable',
-      beta: '/meta/version/beta',
-      nightly: '/meta/version/nightly',
-      rustfmt: '/meta/version/rustfmt',
-      clippy: '/meta/version/clippy',
-      miri: '/meta/version/miri',
+      stable: 'https://play.rust-lang.org/meta/version/stable',
+      beta: 'https://play.rust-lang.org/meta/version/beta',
+      nightly: 'https://play.rust-lang.org/meta/version/nightly',
+      rustfmt: 'https://play.rust-lang.org/meta/version/rustfmt',
+      clippy: 'https://play.rust-lang.org/meta/version/clippy',
+      miri: 'https://play.rust-lang.org/meta/version/miri',
     },
-    gist: { pathname: '/meta/gist/' },
+    gist: { pathname: 'https://play.rust-lang.org/meta/gist/' },
   },
 };
 
