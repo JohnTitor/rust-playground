@@ -73,7 +73,7 @@
   },
   "scripts": {
     "test": "jest",
-    "test:lint": "eslint '**/*.tsx' '**/*.ts'",
+    "test:lint": "eslint \"**/*.tsx\" \"**/*.ts\"",
     "build": "webpack --progress --colors --mode development",
     "build:production": "webpack --progress --colors --mode production",
     "watch": "yarn run build --watch"
